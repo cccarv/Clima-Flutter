@@ -22,7 +22,7 @@ class _LocationScreenState extends State<LocationScreen> {
   var maxima;
   var umidade;
   var vento;
-  var chuva;
+  // var chuva;
   var nuvens;
 
   @override
@@ -38,6 +38,13 @@ class _LocationScreenState extends State<LocationScreen> {
         weatherIcon = 'Error';
         weatherMessage = 'Unable to get weather data';
         cityName = '';
+        tempPercebida = '';
+        minima = '';
+        maxima = '';
+        umidade = '';
+        vento = '';
+        // chuva = '';
+        nuvens = '';
         return;
       }
       temperature = weatherData['main']['temp'].toInt();
@@ -50,7 +57,7 @@ class _LocationScreenState extends State<LocationScreen> {
       maxima = weatherData['main']['temp_max'].toInt();
       umidade = weatherData['main']['humidity'];
       vento = weatherData['wind']['speed'];
-      chuva = weatherData['rain']['1h'];
+      //chuva = weatherData['rain']['1h'];
       nuvens = weatherData['clouds']['all'];
     });
   }
@@ -192,21 +199,21 @@ class _LocationScreenState extends State<LocationScreen> {
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.only(left: 15.0),
-                child: Row(
-                  children: <Widget>[
-                    Text(
-                      'Vol. de Chuva (1h): ',
-                      style: kTextSecundario,
-                    ),
-                    Text(
-                      '$chuva mm',
-                      style: kTextStyleSecundario,
-                    ),
-                  ],
-                ),
-              ),
+              // Padding(
+              //   padding: EdgeInsets.only(left: 15.0),
+              //   child: Row(
+              //     children: <Widget>[
+              //       Text(
+              //         'Vol. de Chuva (1h): ',
+              //         style: kTextSecundario,
+              //       ),
+              //       Text(
+              //         '$chuva mm',
+              //         style: kTextStyleSecundario,
+              //       ),
+              //     ],
+              //   ),
+              // ),
               Padding(
                 padding: EdgeInsets.only(left: 15.0),
                 child: Row(
